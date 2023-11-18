@@ -2,12 +2,15 @@ import * as React from "react"
 
 import { SEO } from "../components/atoms/seo/seo"
 import GlobalStyle from "../styles/GlobalStyles"
+import Input from "../components/atoms/Input/Input"
 
 const IndexPage = () => {
   return (
     <main>
       <GlobalStyle />
       <h1>Strona główna</h1>
+      <Input name="name" type="text" error="Error" label="Imię"/>
+      <Input name="name" type="textarea" error="Error" label="Imię"/>
     </main>
   )
 }
