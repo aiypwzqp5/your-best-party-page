@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
+import { focusVisibleStyles } from "../../../styles/sharedStyles"
 
 const inputStyle = css`
     border: 2px solid var(--black);
     width: 100%;
     border-radius: 21px;
+    ${focusVisibleStyles};
 `
 
 export const StyledInputWrapper = styled.div`

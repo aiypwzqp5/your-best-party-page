@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
+import { focusVisibleStyles } from "../../../styles/sharedStyles"
 
 const basicStyles = css`
     background-color: var(--orange);
@@ -17,12 +18,7 @@ const basicStyles = css`
         background-color: var(--dark-gray);
     }
 
-    &:focus-visible {
-        outline-width: 1px;
-        outline-style: solid;
-        outline-color: var(--orange);
-        outline-offset: 3px;
-    }
+    ${focusVisibleStyles};
 
     @media only screen and (min-width: 768px){
         padding: 22px 62px;
