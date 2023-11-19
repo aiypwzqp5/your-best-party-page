@@ -4,6 +4,7 @@ import { SEO } from "../components/atoms/seo/seo"
 import GlobalStyle from "../styles/GlobalStyles"
 import Input from "../components/atoms/Input/Input"
 import Button from "../components/atoms/Button/Button"
+import Link from "../components/atoms/Link/Link"
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Input name="name" type="text" error="Error" label="Imię"/>
       <Input name="name" type="textarea" error="Error" label="Imię"/>
       <Button text="Przcysik" href="/kontakt" />
+      <Link>Tekst</Link>
     </main>
   )
 }
