@@ -1,22 +1,23 @@
 import * as React from "react"
 
 import { SEO } from "../components/atoms/seo/seo"
-import GlobalStyle from "../styles/GlobalStyles"
 import Input from "../components/atoms/Input/Input"
 import Button from "../components/atoms/Button/Button"
 import Link from "../components/atoms/Link/Link"
 import HamburgerButton from "../components/atoms/HamburgerButton/HamburgerButton"
+import GlobalLayout from "../components/templates/GlobalLayout/GlobalLayout"
 
 const IndexPage = () => {
   return (
-    <main>
-      <GlobalStyle />
-      <h1>Strona główna</h1>
-      <Input name="name" type="text" error="Error" label="Imię"/>
-      <Input name="name" type="textarea" error="Error" label="Imię"/>
-      <Button text="Przcysik" href="/kontakt" />
-      <HamburgerButton isOpen isBlack/>
-    </main>
+    <GlobalLayout>
+      <main>
+        <h1>Strona główna</h1>
+        <Input name="name" type="text" error="Error" label="Imię"/>
+        <Input name="name" type="textarea" error="Error" label="Imię"/>
+        <Button text="Przcysik" href="/kontakt" />
+        <HamburgerButton isOpen isBlack/>
+      </main>
+    </GlobalLayout>
   )
 }
 
