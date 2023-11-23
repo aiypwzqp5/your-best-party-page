@@ -1,5 +1,11 @@
 const React = require("react");
 
+const GlobalLayout = require("./src/components/templates/GlobalLayout/GlobalLayout").default;
+
+exports.wrapPageElement = ({ element, props }) => {
+    return <GlobalLayout {...props}>{element}</GlobalLayout>
+}
+
 exports.onRenderBody = ({ setHeadComponents }) => {
     setHeadComponents([
         <link
