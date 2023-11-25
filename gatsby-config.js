@@ -13,6 +13,17 @@ module.exports = {
     "gatsby-plugin-styled-components", 
     "gatsby-plugin-image",
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 95,
+        }
+      }
+    },
+    `gatsby-transformer-sharp`,
+    {
       resolve: `gatsby-source-datocms`,
       options: {
         // You can find your read-only API token under the Settings > API tokens

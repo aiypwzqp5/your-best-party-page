@@ -6,15 +6,16 @@ import Input from "../components/atoms/Input/Input"
 import Button from "../components/atoms/Button/Button"
 import Link from "../components/atoms/Link/Link"
 import HamburgerButton from "../components/atoms/HamburgerButton/HamburgerButton"
+import HeroSection from "../components/organisms/HeroSection/HeroSection"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
   return (
     <main>
-      <h1>{data.datoCmsStronaGWna.tytuStrony}</h1>
-      <Input name="name" type="text" error="Error" label="Imię"/>
-      <Input name="name" type="textarea" error="Error" label="Imię"/>
-      <Button text="Przcysik" href="/kontakt" />
-      <HamburgerButton isOpen isBlack/>
+      <HeroSection 
+        title={datoCmsStronaGWna.tytuStrony}
+        desc={datoCmsStronaGWna.opisStronyWSekcjiGOwnej}
+        heroImage={datoCmsStronaGWna.zdjCieGWne}
+      />
     </main>
   )
 }
@@ -33,6 +34,7 @@ export const query = graphql`
       zdjCieGWne {
         alt
         title
+        gatsbyImageData
       }
     }
   }
