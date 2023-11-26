@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import styled, { css } from "styled-components"
 
 export const focusVisibleStyles = css`
     &:focus-visible {
@@ -8,3 +8,5 @@ export const focusVisibleStyles = css`
         outline-offset: 3px;
     }
 `
+
+export const StyledSecondTitle = styled.h2``

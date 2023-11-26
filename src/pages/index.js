@@ -5,6 +5,8 @@ import { SEO } from "../components/atoms/seo/seo"
 import Input from "../components/atoms/Input/Input"
 import Button from "../components/atoms/Button/Button"
 import Link from "../components/atoms/Link/Link"
+import YourBestPartySection from "../components/molecules/YourBestPartySection/YourBestPartySection"
+import ListSection from "../components/molecules/ListSection/ListSection"
 import HamburgerButton from "../components/atoms/HamburgerButton/HamburgerButton"
 import HeroSection from "../components/organisms/HeroSection/HeroSection"
 
@@ -15,6 +17,16 @@ const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
         title={datoCmsStronaGWna.tytuStrony}
         desc={datoCmsStronaGWna.opisStronyWSekcjiGOwnej}
         heroImage={datoCmsStronaGWna.zdjCieGWne}
+      />
+      <YourBestPartySection
+        image={datoCmsStronaGWna.zdjCieDoDrugiejSekcji}
+        title={datoCmsStronaGWna.tytuDrugiejSekcji}
+        desc={datoCmsStronaGWna.opisDrugiejSekcji}
+      />
+      <ListSection
+        image={datoCmsStronaGWna.zdjCieDoTrzeciejSekcji}
+        title={datoCmsStronaGWna.tytuTrzeciejSekcji}
+        list={datoCmsStronaGWna.lista}
       />
     </main>
   )
@@ -50,6 +62,7 @@ export const query = graphql`
         gatsbyImageData
       }
       lista {
+        id
         element
       }
     }
