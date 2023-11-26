@@ -13,7 +13,7 @@ import { StyledSecondTitle } from '../../../styles/sharedStyles'
 const YourBestPartySection = ({ image, title, desc }) => 
     <StyledYourBestPartySection>
         <StyledTextWrapper>
-            <StyledSecondTitle>{title}</StyledSecondTitle>
+            <StyledSecondTitle $mobileTextAlign="center">{title}</StyledSecondTitle>
             <StyledDesc>
                 {desc}
             </StyledDesc>
