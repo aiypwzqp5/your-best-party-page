@@ -36,6 +36,22 @@ export const query = graphql`
         title
         gatsbyImageData
       }
+      opisDrugiejSekcji
+      tytuDrugiejSekcji
+      tytuTrzeciejSekcji
+      zdjCieDoDrugiejSekcji {
+        alt
+        title
+        gatsbyImageData
+      }
+      zdjCieDoTrzeciejSekcji{
+        alt
+        title
+        gatsbyImageData
+      }
+      lista {
+        element
+      }
     }
   }
 `
