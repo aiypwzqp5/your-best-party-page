@@ -18,3 +18,9 @@ export const StyledSecondTitle = styled.h2`
         $desktopTextAlign ? $desktopTextAlign : $mobileTextAlign ?? "left"};
     }
 `;
+
+export const StyledGlobalWrapper = styled.div`
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+`
