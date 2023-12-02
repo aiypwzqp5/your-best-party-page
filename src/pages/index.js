@@ -2,13 +2,10 @@ import * as React from "react"
 import { graphql } from "gatsby"
 
 import { SEO } from "../components/atoms/seo/seo"
-import Input from "../components/atoms/Input/Input"
-import Button from "../components/atoms/Button/Button"
-import Link from "../components/atoms/Link/Link"
 import YourBestPartySection from "../components/molecules/YourBestPartySection/YourBestPartySection"
 import ListSection from "../components/molecules/ListSection/ListSection"
-import HamburgerButton from "../components/atoms/HamburgerButton/HamburgerButton"
 import HeroSection from "../components/organisms/HeroSection/HeroSection"
+import OurRealizationsSection from "../components/organisms/OurRealizationsSection/OurRealizationsSection"
 
 const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
   return (
@@ -28,6 +25,7 @@ const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
         title={datoCmsStronaGWna.tytuTrzeciejSekcji}
         list={datoCmsStronaGWna.lista}
       />
+      <OurRealizationsSection />
     </main>
   )
 }

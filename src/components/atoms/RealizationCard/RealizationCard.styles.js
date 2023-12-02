@@ -15,7 +15,8 @@ export const StyledImageWrapper = styled.div`
     width: 100%;
     height: 100%;
 
-    .gatsby-image-wrapper {
+    .gatsby-image-wrapper,
+    img {
         width: 100%;
         height: 100%;
     }
