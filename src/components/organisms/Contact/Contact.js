@@ -34,7 +34,24 @@ const Contact = () => {
         resolver: yupResolver(formValidation),
       })
 
-    const onSubmit = (data) => console.log(data)
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(
+                (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+                )
+            .join("&");
+    };
+
+    const onSubmit = (data) => {
+        fetch('/', {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...data }),
+        }).then(() => {
+            setIsError(false);
+            setIsSend(true);
+        }).catch(() => setIsError(true))
+    }
 
     const fields = [
         {
