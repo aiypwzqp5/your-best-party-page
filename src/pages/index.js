@@ -6,6 +6,7 @@ import YourBestPartySection from "../components/molecules/YourBestPartySection/Y
 import ListSection from "../components/molecules/ListSection/ListSection"
 import HeroSection from "../components/organisms/HeroSection/HeroSection"
 import OurRealizationsSection from "../components/organisms/OurRealizationsSection/OurRealizationsSection"
+import FAQContactSection from "../components/organisms/Contact/Contact"
 
 const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
   return (
@@ -26,6 +27,7 @@ const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
         list={datoCmsStronaGWna.lista}
       />
       <OurRealizationsSection />
+      <FAQContactSection />
     </main>
   )
 }
