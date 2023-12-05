@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const StyledFAQSection = styled.section`
   width: 100%;
   background-color: var(--orange);
-  padding: ${({ $isContactPage }) =>
-      $isContactPage ? "40px" : "clamp(34px, 4.444vw, 64px)"}
+  padding: ${({ $isContactPage }) => ($isContactPage ? "40px" : "clamp(34px, 4.444vw, 64px)")}
     clamp(22px, 4.722vw, 68px) clamp(34px, 4.444vw, 64px);
 
   @media only screen and (min-width: 954px) {

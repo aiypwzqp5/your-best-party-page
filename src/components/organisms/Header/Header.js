@@ -1,33 +1,41 @@
-import React, { useState } from 'react'
-import { useLocation } from '@reach/router'
+import React, { useState } from "react";
+import { useLocation } from "@reach/router";
 
-import Nav from "../Nav/Nav"
-import HamburgerButton from "../../atoms/HamburgerButton/HamburgerButton"
+import Nav from "../Nav/Nav";
+import HamburgerButton from "../../atoms/HamburgerButton/HamburgerButton";
 
-import { StyledHeader, StyledLogo } from './Header.styles'
-import Logo from '../../atoms/Icons/Logo'
+import { StyledHeader, StyledLogo } from "./Header.styles";
+import Logo from "../../atoms/Icons/Logo";
 
 const Header = () => {
-    const location = useLocation();
-    const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
-    const isOurRealizationPage = 
-        location.pathname === '/nasze-realizacje/' ||
-        location.pathname.includes("/realizacj/");
+  const isOurRealizationPage = location.pathname === "/nasze-realizacje/";
 
   return (
     <StyledHeader>
-        <StyledLogo to="/">
-            <Logo isBlack={isOurRealizationPage || location.pathname === '/kontakt/'} />
-        </StyledLogo>
-        <Nav isBlack={isOurRealizationPage} isOpen={isOpen} />
-        <HamburgerButton
-            isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
-            isOpen={isOpen}
-            openMenu={() => setIsOpen((prev) => !prev)}
+      <StyledLogo to="/">
+        <Logo
+          isBlack={
+            isOurRealizationPage ||
+            location.pathname === "/kontakt/" ||
+            location.pathname.includes("/realizacja/")
+          }
         />
+      </StyledLogo>
+      <Nav isBlack={isOurRealizationPage} isOpen={isOpen} />
+      <HamburgerButton
+        isBlack={
+          isOurRealizationPage ||
+          location.pathname === "/kontakt/" ||
+          location.pathname.includes("/realizacja/")
+        }
+        isOpen={isOpen}
+        openMenu={() => setIsOpen((prev) => !prev)}
+      />
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
