@@ -10,7 +10,7 @@ import Button from "../../atoms/Button/Button"
 
 import { formValidation, labels } from "./Contact.data"
 
-const Contact = () => {
+const Contact = ({ isContactPage }) => {
     const { datoCmsSekcjaKontakt } = useStaticQuery(graphql`
         query ContactQuery {
             datoCmsSekcjaKontakt {
@@ -72,7 +72,7 @@ const Contact = () => {
     ]
 
   return (
-    <StyledContact>
+    <StyledContact $isContactPage={isContactPage}>
         <StyledSecondTitle>{datoCmsSekcjaKontakt.tytu}</StyledSecondTitle>
         <StyledForm 
             onSubmit={handleSubmit(onSubmit)}

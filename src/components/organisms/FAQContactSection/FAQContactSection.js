@@ -6,13 +6,13 @@ import DoubleCircle from '../../atoms/Icons/DoubleCircle'
 
 import { StyledFAQContactSection, StyledCircleWrapper } from "./FAQContactSection.styles"
 
-const FAQContactSection = () => (
-  <StyledFAQContactSection>
+const FAQContactSection = ({ isContactPage }) => (
+  <StyledFAQContactSection $isContactPage={isContactPage}>
     <StyledCircleWrapper>
       <DoubleCircle />
     </StyledCircleWrapper>
-    <Contact />
-    <FAQSection />
+    <Contact isContactPage={isContactPage} />
+    <FAQSection isContactPage={isContactPage} />
   </StyledFAQContactSection>
 )
 

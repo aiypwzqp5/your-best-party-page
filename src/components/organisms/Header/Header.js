@@ -14,7 +14,7 @@ const Header = () => {
     const isOurRealizationPage = 
         location.pathname === '/nasze-realizacje/' ||
         location.pathname.includes("/realizacj/");
-    
+
   return (
     <StyledHeader>
         <StyledLogo to="/">
@@ -22,9 +22,9 @@ const Header = () => {
         </StyledLogo>
         <Nav isBlack={isOurRealizationPage} isOpen={isOpen} />
         <HamburgerButton
-            isBlack={isOurRealizationPage}
+            isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
             isOpen={isOpen}
-            openMenu={(prev) => setIsOpen(!prev)}
+            openMenu={() => setIsOpen((prev) => !prev)}
         />
     </StyledHeader>
   )

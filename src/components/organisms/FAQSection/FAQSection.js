@@ -6,7 +6,7 @@ import FAQElement from "../../atoms/FAQElement/FAQElement"
 import { StyledFAQSection, StyledElements } from "./FAQSection.styles"
 import { StyledSecondTitle } from "../../../styles/sharedStyles"
 
-const FAQSection = () => {
+const FAQSection = ({ isContactPage }) => {
     const { datoCmsSekcjaFaq } = useStaticQuery(graphql`
         query faqQuery {
             datoCmsSekcjaFaq {
@@ -22,8 +22,8 @@ const FAQSection = () => {
 
 
     return (
-        <StyledFAQSection>
-            <StyledSecondTitle>
+        <StyledFAQSection $isContactPage={isContactPage}>
+            <StyledSecondTitle style={{ color: 'var(--white)'}}>
                 {datoCmsSekcjaFaq.tytu}
             </StyledSecondTitle>
             <StyledElements>
