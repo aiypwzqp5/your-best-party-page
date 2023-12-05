@@ -6,7 +6,7 @@ import YourBestPartySection from "../components/molecules/YourBestPartySection/Y
 import ListSection from "../components/molecules/ListSection/ListSection"
 import HeroSection from "../components/organisms/HeroSection/HeroSection"
 import OurRealizationsSection from "../components/organisms/OurRealizationsSection/OurRealizationsSection"
-import FAQContactSection from "../components/organisms/Contact/Contact"
+import FAQContactSection from "../components/organisms/FAQContactSection/FAQContactSection"
 
 const IndexPage = ({ data: { datoCmsStronaGWna }}) => {
   return (
