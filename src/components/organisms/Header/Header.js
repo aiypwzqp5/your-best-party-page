@@ -24,7 +24,7 @@ const Header = () => {
           }
         />
       </StyledLogo>
-      <Nav isBlack={isOurRealizationPage} isOpen={isOpen} />
+      <Nav isBlack={isOurRealizationPage} isOpen={isOpen} setIsOpen={setIsOpen} />
       <HamburgerButton
         isBlack={
           isOurRealizationPage ||
